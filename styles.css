@@ -152,6 +152,7 @@ section:nth-child(4) {
     }
 }
 
+/* Стили для всех устройств */
 .order-form {
     display: flex;
     flex-direction: column;
@@ -165,40 +166,22 @@ section:nth-child(4) {
     box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
 }
 
-.order-form label {
-    font-weight: 600;
-    margin-bottom: 5px;
-}
+/* Для мобильных устройств с шириной экрана до 600px */
+@media (max-width: 600px) {
+    .order-form {
+        width: 90%; /* Уменьшение ширины формы для лучшего отображения */
+        margin: 10px auto; /* Центрирование с отступами */
+    }
 
-.order-form input,
-.order-form textarea {
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #d4af37;
-    border-radius: 5px;
-    background-color: #000;
-    color: #d4af37;
-}
+    .order-form input,
+    .order-form textarea {
+        width: 100%; /* Полная ширина полей ввода на мобильных устройствах */
+        box-sizing: border-box; /* Учет отступов и границ в общей ширине */
+    }
 
-.order-form textarea {
-    height: 100px;
-}
-
-.order-form .btn {
-    padding: 10px;
-    background-color: #d4af37;
-    color: #000;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.order-form .btn:hover {
-    background-color: #fff;
-    color: #000;
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+    .order-form .btn {
+        width: 100%; /* Кнопка также растягивается на всю ширину */
+    }
 }
 
 
