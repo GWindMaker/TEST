@@ -226,3 +226,20 @@ section:nth-child(4) {
     align-items: center;
     margin-bottom: 10px;
 }
+
+@media only screen and (max-width: 600px) {
+  /* Стили для экранов менее 600px */
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+  }
+}
